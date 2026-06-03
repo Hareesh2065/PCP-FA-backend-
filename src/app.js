@@ -26,6 +26,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // API Route Bindings
+app.use('/health', healthRoutes);
 app.use('/auth', authRoutes);
 app.use('/issues', issueRoutes);
 app.use('/sync', syncRoutes);
