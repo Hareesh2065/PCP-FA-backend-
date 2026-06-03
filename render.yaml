@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: pcp-fa-backend
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: JWT_EXPIRES_IN
+        value: 24h
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+      - key: STUDENT_ID
+        value: E0323004
+      - key: STUDENT_PASSWORD
+        value: "425057"
+      - key: STUDENT_SET
+        value: setB
+      - key: API_BASE_URL
+        value: https://t4e-testserver.onrender.com/api
